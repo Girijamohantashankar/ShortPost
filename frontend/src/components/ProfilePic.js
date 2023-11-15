@@ -8,12 +8,13 @@ export default function ProfilePic({ changeprofile }) {
   const [isUploading, setIsUploading] = useState(false);
 
   // posting image to cloudinary
+  // to change profile
   const postDetails = () => {
     const data = new FormData();
     data.append("file", image);
     data.append("upload_preset", "post-image");
-    data.append("cloud_name", "gantacloud7");
-    fetch("https://api.cloudinary.com/v1_1/gantacloud7/image/upload", {
+    data.append("cloud_name", "girija");
+    fetch("https://api.cloudinary.com/v1_1/girija/image/upload", {
       method: "post",
       body: data,
     })
