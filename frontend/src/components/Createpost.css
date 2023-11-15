@@ -7,6 +7,9 @@
 
 .main-div{
     border-top: 1px solid rgb(173, 173, 173) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .post-header{
     display: flex;
@@ -37,6 +40,8 @@ textarea{
     border: none;
     outline: none;
     margin-top: 5px;
+    width: 300px;
+    height: 300px;
 }
 .createPost button{
     margin-top: 20px;
@@ -56,6 +61,12 @@ textarea{
 }
 .btn-post{
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-button{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

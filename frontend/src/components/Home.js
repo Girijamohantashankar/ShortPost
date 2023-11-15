@@ -237,12 +237,7 @@ export default function Home() {
                 className="card-header"
                 style={{ borderBottom: "1px solid #00000029" }}
               >
-                <div className="card-pic">
-                  <img
-                    src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                    alt=""
-                  />
-                </div>
+               
                 <h5>{item.postedBy.name}</h5>
               </div>
 
