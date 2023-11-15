@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()
-const port = 5000;
+const port = process.env.port || 5000;
+// coreect your port url to set the port
 const mongoose = require("mongoose");
 const { mongoUrl } = require("./keys");
 const cors = require("cors");
@@ -22,6 +23,8 @@ mongoose.connection.on("connected", () => {
 mongoose.connection.on("error", () => {
     console.log("not connected to mongodb")
 })
+
+// This part for serving the frontend part into the backend
 
 app.use(express.static(path.join(__dirname, "./frontend/build")))
 
