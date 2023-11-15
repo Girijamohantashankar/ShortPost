@@ -1,0 +1,84 @@
+.signUp {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB1lN1hGZAj0MpZ1ZoN7tt7q38JyzTvjmSMQ&usqp=CAU");
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 68px);
+  align-items: center;
+}
+
+.form {
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid rgb(129, 121, 121);
+  border-radius: 1px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPara {
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0px 40px 20px 40px;
+}
+
+input {
+  padding: 5px;
+  margin: 3px 0px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+.form > div {
+  width: 90%;
+  margin: auto;
+}
+
+#submit-btn {
+  background-color: #6817ea;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  width: 90%;
+  cursor: pointer;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+#submit-btn:hover {
+  background-color: #370e7a;
+}
+
+.form2 {
+  padding: 30px;
+  margin-top: 5px;
+  border-radius: 1px;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+    .form {
+        width: 90%;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    .form {
+        padding: 15px;
+    }
+}
