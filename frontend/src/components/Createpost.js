@@ -9,6 +9,8 @@ export default function Createpost() {
   const [url, setUrl] = useState("")
   const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+
   // Toast functions
   const notifyA = (msg) => toast.error(msg)
   const notifyB = (msg) => toast.success(msg)
@@ -47,18 +49,19 @@ export default function Createpost() {
   // posting image to cloudinary
   const postDetails = () => {
     setIsLoading(true);
-    const data = new FormData()
-    data.append("file", image)
-    data.append("upload_preset", "post-image")
-    data.append("cloud_name", "girija")
+    const data = new FormData();
+    data.append("file", image);
+    data.append("upload_preset", "post-image");
+    data.append("cloud_name", "girija");
     fetch("https://api.cloudinary.com/v1_1/girija/image/upload", {
       method: "post",
-      body: data
-    }).then(res => res.json())
-      .then(data => setUrl(data.url))
-      .catch(err => console.log(err))
-
-  }
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => setUrl(data.url))
+      .catch((err) => console.log(err))
+      .finally(() => setIsUploading(false));
+  };
 
 
   const loadfile = (event) => {
