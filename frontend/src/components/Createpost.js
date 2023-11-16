@@ -19,6 +19,8 @@ export default function Createpost() {
   useEffect(() => {
 
     // saving post to mongodb
+
+    // database save
     if (url) {
 
       fetch("/createPost", {
